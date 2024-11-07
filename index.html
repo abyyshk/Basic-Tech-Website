@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tech</div>
+
+        <!-- Hamburger icon (hidden by default on larger screens) -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Normal navigation menu (visible on large screens) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sliding menu (hidden by default, slides in on mobile) -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Content that will be centered -->
+    <div class="content-wrapper">
+        <section>
+            <h2>Welcome to Our Tech Company</h2>
+            <p>Your partner in innovation and technology solutions.</p>
+        </section>
+    </div>
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+   
+        <p>&copy; 2024 Logic Tech. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+    // Select the hamburger menu elements
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    // Toggle the menu open/close state when hamburger is clicked
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+
+    // Detect window resizing and reset the menu state
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            // On large screens, ensure the menu is closed and reset hamburger state
+            menu.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
